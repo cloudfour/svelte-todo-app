@@ -34,7 +34,7 @@
 
 <main>
   <div class="container">
-    <h1 class="app-title">todos</h1>
+    <h1 class="app-title">ToDos</h1>
     <ul class="todo-list">
       {#each todoItems as todo (todo.id)}
         <li class="todo-item {todo.checked ? 'done' : ''}" data-cy="todo-item">
