@@ -1,10 +1,4 @@
 <script>
-  import { afterUpdate } from "svelte";
-
-  afterUpdate(() => {
-    document.querySelector(".js-todo-input").focus();
-  });
-
   let todoItems = [];
   let newTodo = "";
 
