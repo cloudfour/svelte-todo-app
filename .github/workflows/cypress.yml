@@ -12,7 +12,6 @@ jobs:
           build: npm run build
           start: npm start
           wait-on: http://localhost:5000
-          browser: chrome
           record: true
         env:
           # pass the Dashboard record key as an environment variable
