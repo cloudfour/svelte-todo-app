@@ -1,5 +1,5 @@
 name: Cypress
-on: [pull_request]
+on: [push, pull_request]
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
@@ -9,4 +9,10 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v1
         with:
+          build: npm run build
           start: npm start
+          wait-on: http://localhost:5000
+          record: true
+        env:
+          # pass the Dashboard record key as an environment variable
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
