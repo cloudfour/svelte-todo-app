@@ -43,7 +43,7 @@
             for={todo.id}
             class="tick"
             data-cy="visual-checkbox"
-            on:click={() => toggleDone(todo.id)} />
+            on:click={() => toggleDone(todo)} />
           <span>{todo.text}</span>
           <button
             class="delete-todo"
